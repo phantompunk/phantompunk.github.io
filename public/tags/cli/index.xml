@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CLI on My New Hugo Site</title>
+    <link>http://example.org/tags/cli/</link>
+    <description>Recent content in CLI on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://example.org/tags/cli/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>No-Framework Approach to Building a CLI with Go</title>
+      <link>http://example.org/blog/go-cli-from-scratch/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/blog/go-cli-from-scratch/</guid>
+      <description>In this guide, we will be building a CLI tool from scratch. No fancy frameworks or libraries &amp;ndash; instead, we are building our own highly minimal framework loosely based on Cobra.
+Here&amp;rsquo;s a taste of what we&amp;rsquo;re building: :fish: gupi
+:zap: Disclaimer: Popular CLI frameworks exist for every language. In most cases, you&amp;rsquo;re better off picking your favorite flavor and going with that. If you have ever wondered how CLI frameworks do what they do, then read on.</description>
+    </item>
+    
+  </channel>
+</rss>

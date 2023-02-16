@@ -1,0 +1,44 @@
+<!-- {{ define "main" }}
+<section class="section is-medium">
+    <div class="container">
+        <input class="input is-medium" type="text" placeholder="Medium input">
+        <hr />
+    </div>
+    <div class="container">
+        {{ range ( where site.RegularPages "Type" "in" site.Params.mainSections ) }}
+        <section class="section">
+            <a href="{{ .Permalink }}">
+                <h1 class="title">{{ .Title }}</h1>
+                <div class="level is-mobile">
+                    <div class="level-left">
+                        <div class="level-item">
+                            <div class="level-item">
+                                <p>Published: {{ .PublishDate | time.Format "Mon, Jan 2, 2006" }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="subtitle">{{ .Summary }}</h1>
+
+            </a>
+            <div class="level is-mobile">
+                <div class="level-left">
+                    {{ range .Params.tags }}
+                    <div class="level-item">
+                        <a href="{{ . }}">
+                            <p>#{{ . }}</p>
+                        </a>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+
+        </section>
+        {{ end }}
+    </div>
+</section>
+
+<hr />
+
+
+{{ end }} -->

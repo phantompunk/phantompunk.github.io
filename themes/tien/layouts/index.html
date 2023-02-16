@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="container grid">
+    <div class="content">
+        <h1>{{ .Title }}</h1>
+        <h2>{{ .Content }}</h2>
+    </div>
+    <div class="level is-mobile">
+        <div class="level-left">
+            <a class="level-item" href="/blog">
+                <p class="subtitle">writing</p>
+            </a>
+            <a class="level-item" href="/til">
+                <p class="subtitle">til</p>
+            </a>
+        </div>
+    </div>
+
+</div>
+{{ end }}

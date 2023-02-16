@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="container grid">
+    <h1 class="title has-text-centesred">{{ .Title }}</h1>
+    <p class="subtitle">{{ .Summary }}</p>
+    <div class="columns has-text-centered mb-0">
+        <p class="column p-0">Updated: {{ .Lastmod | time.Format "2006-01-02" }}</p>
+        {{ range (first 1 .Params.tags) }}
+        <p class="column p-0">{{ . }}</p>
+        {{ end }}
+        <p class="column p-0">Published: {{ .PublishDate | time.Format "2006-01-02" }}</p>
+    </div>
+    <hr class="grid-xl mt-0" />
+    <div class="content">
+        {{ .Content }}
+    </div>
+</div>
+{{ end }}
