@@ -1,0 +1,47 @@
+html {
+    background: radial-gradient(#c6c5c5 1px, #eee 1px) 0 0 / 20px 20px;
+}
+
+header {
+    height: 120px;
+}
+
+hr {
+    background-color: #c6c5c5;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 0.7fr [xl-start] 0.3fr [md-start] minmax(0, 624px) [md-end] .3fr [xl-end] .7fr;
+}
+
+.grid * {
+    grid-column: md;
+}
+
+.grid-xl {
+    grid-column: xl;
+}
+
+.entry {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+}
+
+.entry-start {
+    grid-column: 1 / 2;
+}
+
+.entry-end {
+    grid-column: 2 / 2;
+    display: flex;
+    justify-content: end;
+}
+
+.entry1 {
+    max-width: 960px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}

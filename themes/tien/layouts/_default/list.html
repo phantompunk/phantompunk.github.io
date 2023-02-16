@@ -1,0 +1,37 @@
+{{ define "main" }}
+<div class="container grid">
+    <div class="content">
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+    </div>
+    <hr class=" grid-xl" />
+
+    {{ if (eq .Type `til`)}}
+    <div class="entry">
+        {{ range ( where site.RegularPages "Type" "in" "til" ) }}
+        <a class="entry-start" href="{{ .Permalink }}">{{ .Title }}</a>
+        <div class="entry-end">
+            <span>{{ .PublishDate | time.Format "Mon, Jan 2, 2006" }}
+                {{ range (first 1 .Params.tags) }}<a class="pl-1">{{ . }}</a>{{ end }}
+            </span>
+        </div>
+        {{ end }}
+    </div>
+    {{ else }}
+    {{ range ( where site.RegularPages "Type" "in" site.Params.mainSections ) }}
+    <div class="block">
+        <a href="{{ .Permalink }}">
+            <p class="title mb-1">{{ .Title }}</p>
+            <p class="details">Published: {{ .PublishDate | time.Format "Mon, Jan 2, 2006" }}</p>
+            <p class="subtitle">{{ .Summary }}</p>
+        </a>
+        {{ range .Params.tags }}
+        <a href="{{ . }}">#{{ . }}</a>
+        {{ end }}
+    </div>
+    {{ end }}
+    {{ end }}
+</div>
+
+
+{{ end }}

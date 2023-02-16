@@ -1,0 +1,6 @@
+{{ define "main" }}
+{{ .Content }}
+{{ range .Site.Pages }}
+{{ .Title }}<br>
+{{ end }}
+{{ end }}
