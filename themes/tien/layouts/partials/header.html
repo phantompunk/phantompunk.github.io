@@ -1,17 +1,11 @@
-<header class="section grid">
-    <nav class="level is-mobile grid-xl">
-        <div class="level-left">
-            <a class="level-item" href="/">
-                <p class="title">Rigo Moran</p>
-            </a>
-        </div>
-        <div class="level-right">
-            <a class="level-item" href="/blog">
-                <p class="subtitle">writing</p>
-            </a>
-            <a class="level-item" href="/til">
-                <p class="subtitle">til</p>
-            </a>
-        </div>
-    </nav>
-</header>
+<nav class="navbar is-flex">
+    <a class="navbar-item is-flex-grow-1">
+        <h1>{{ .Site.Title | default .Title }}</h1>
+    </a>
+    <a class="navbar-item ">
+        <h2>Writing</h2>
+    </a>
+    <a class=" navbar-item ">
+        <h2>Posts</h2>
+    </a>
+</nav>

@@ -3,12 +3,10 @@
 {{- partial "head.html" . -}}
 
 <body>
-    {{ if ne .IsHome true }}
     {{- partial "header.html" . -}}
-    {{ end }}
-    <section class="section">
+    <div class="main">
         {{- block "main" . }}{{- end }}
-    </section>
+    </div>
     {{- partial "footer.html" . -}}
 </body>
 

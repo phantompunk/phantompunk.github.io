@@ -1,7 +1,14 @@
-html {
+html,
+nav {
     background: radial-gradient(#c6c5c5 1px, #eee 1px) 0 0 / 20px 20px;
 }
 
+body {
+    margin: 0 auto;
+    max-width: 50em;
+}
+
+/*
 header {
     height: 120px;
 }
@@ -44,4 +51,4 @@ hr {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-}
+} */
