@@ -1,7 +1,9 @@
 {{ define "main" }}
 <section class="hero is-medium">
     <div class="hero-body content">
-        <p class="">{{ .Content }}</p>
+        <div class="bio">
+            <p>{{ .Content }}</p>
+        </div>
 
         <div>
             {{ range .Site.Params.socials }}

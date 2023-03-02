@@ -32,6 +32,11 @@ hr {
     height: 4px;
 }
 
+.bio a {
+    border-bottom: .2rem dotted;
+}
+
+
 /*
 header {
     height: 120px;
