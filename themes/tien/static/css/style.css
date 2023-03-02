@@ -27,14 +27,16 @@ nav h2 {
     line-height: 1.25;
 }
 
+hr {
+    background-color: #363636;
+    height: 4px;
+}
+
 /*
 header {
     height: 120px;
 }
 
-hr {
-    background-color: #c6c5c5;
-}
 
 .grid {
     display: grid;

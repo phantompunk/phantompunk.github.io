@@ -1,0 +1,14 @@
+<section class="section pt-1">
+    {{ range ( where site.RegularPages "Type" "in" site.Params.mainSections ) }}
+    <div class="container content">
+        <a href="{{ .Permalink }}">
+            <h3>{{ .Title }}</h3>
+        </a>
+        <p class="details">Published: {{ .PublishDate | time.Format "Jan 2, 2006" }}</p>
+        <p class="subtitle">{{ .Summary }}</p>
+        {{ range .Params.tags }}
+        <a href="{{ . }}"><span class="tag is-link">#{{ . }}</span></a>
+        {{ end }}
+    </div>
+    {{ end }}
+</section>
