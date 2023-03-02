@@ -4,6 +4,7 @@ authors:
 tags: [Go, Golang, CLI]
 date: 2021-12-01
 title: "No-Framework Approach to Building a CLI with Go"
+url: no-framework-go-cli
 image: https://raw.githubusercontent.com/ippontech/blog-usa/master/images/2022/03/A-No-Framework-Approach-to-Building-a-CLI-with-Go.png
 summary: In this guide, we will be building a CLI tool from scratch. No fancy frameworks or libraries instead, we are building our own
 ---
