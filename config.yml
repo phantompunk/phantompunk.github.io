@@ -3,6 +3,15 @@ languageCode: en-us
 title: Rigo Moran
 theme: tien
 params:
+  socials:
+    - name: twitter
+      url: 'https://twitter.com/rigomoran_'
+    - name: linkedin
+      url: 'https://www.linkedin.com/in/rodrigomoran'
+    - name: github
+      url: 'https://github.com/phantompunk'
+    - name: stack-overflow
+      url: 'https://stackoverflow.com/users/5776586/rodrigo-moran'
   categories:
     - Web Development
     - Blogging
