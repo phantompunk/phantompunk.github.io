@@ -1,8 +1,4 @@
----
-title: Hi! Hola! Ola! I'm Rigo
-date: 2023-02-05
----
+# ¡Hola! I’m Rigo.
+## I write software for a living mostly backend systems and cloud infrastructure. On occasion, I write about what I'm working on [ideas](/blog). Building my writing habit by keeping a [today i learned](/til) series.
 
-## A software engineer based in Richmond helping clients thrive in the ☁️ with Python and Go
-
-### Welcome to my digital garden. 🌱
+## Currently working remotely at [@ipponusa]().

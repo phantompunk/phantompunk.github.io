@@ -1,0 +1,15 @@
+<section class="section">
+    {{ range ( where site.RegularPages "Type" "in" "til" ) }}
+    <div class="columns content is-vcentered">
+        <div class="column">
+            <a href="{{ .Permalink }}">
+                <h3>{{ .Title }}</h3>
+            </a>
+        </div>
+        <div class="column is-vcentered">
+            <h5>{{ .PublishDate | time.Format "Mon, Jan 2, 2006" }} {{ range (first 1 .Params.tags) }}<a class="pl-1">{{
+                    . }}</a>{{ end }}</h5>
+        </div>
+    </div>
+    {{ end }}
+</section>

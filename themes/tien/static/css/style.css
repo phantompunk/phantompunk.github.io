@@ -1,14 +1,47 @@
-html {
-    background: radial-gradient(#c6c5c5 1px, #eee 1px) 0 0 / 20px 20px;
+html,
+nav {
+    background: radial-gradient(#c6c5c5 1px, #fff 1px) 0 0 / 20px 20px;
 }
 
+body {
+    margin: 0 auto;
+    max-width: 50em;
+}
+
+.is-medium-icon {
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+nav h1 {
+    color: #363636;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.125;
+}
+
+nav h2 {
+    color: #4a4a4a;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+hr {
+    background-color: #363636;
+    height: 4px;
+}
+
+.bio a {
+    border-bottom: .2rem dotted;
+}
+
+
+/*
 header {
     height: 120px;
 }
 
-hr {
-    background-color: #c6c5c5;
-}
 
 .grid {
     display: grid;
@@ -44,4 +77,4 @@ hr {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-}
+} */

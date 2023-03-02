@@ -1,0 +1,5 @@
+<a href="{{ .url }}" target="_blank">
+    <span class="icon mr-2 is-medium-icon">
+        {{ readFile ( print "/static/fontawesome/" .name ".svg") | safeHTML }}
+    </span>
+</a>

@@ -3,6 +3,8 @@ title: Move lines around in Neovim
 date: 2023-02-05
 draft: false
 tags: [vim]
+url: move-lines-in-nvim
+summary: How to set up keymaps to move lines up or down in neovim
 ---
 
 One of my favorite hotkeys in VS Code is being able to move the current line or lines around using:
