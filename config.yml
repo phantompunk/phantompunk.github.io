@@ -14,8 +14,8 @@ params:
       url: 'https://stackoverflow.com/users/5776586/rodrigo-moran'
   categories:
     - Web Development
-    - Blogging
     - Web Design
+
   mainSections:
-    - blog
+    - ideas
     - til

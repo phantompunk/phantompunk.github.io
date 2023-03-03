@@ -1,17 +1,33 @@
 {{ define "main" }}
-<div class="container grid">
-    <h1 class="title has-text-centesred">{{ .Title }}</h1>
-    <p class="subtitle">{{ .Summary }}</p>
-    <div class="columns has-text-centered mb-0">
-        <p class="column p-0">Updated: {{ .Lastmod | time.Format "2006-01-02" }}</p>
-        {{ range (first 1 .Params.tags) }}
-        <p class="column p-0">{{ . }}</p>
+<section class="section pb-1">
+    <div class="container content">
+        {{ if (eq .Type `til`)}}
+        <p class="title has-text-centered">til ~ {{ .Title }}</p>
+        {{ else }}
+        <p class="title">{{ .Title }}</p>
+        <p class="subtitle">{{ .Summary }}</p>
         {{ end }}
-        <p class="column p-0">Published: {{ .PublishDate | time.Format "2006-01-02" }}</p>
+        <div class="columns">
+            <div class="column">
+                <p>Published: {{ .PublishDate | time.Format "2006-01-02" }}</p>
+            </div>
+            {{ range (first 1 .Params.tags) }}
+            <div class="column has-text-centered">
+                <a href="{{ . }}"><span class="tag is-link">#{{ . }}</span></a>
+            </div>
+            {{ end }}
+            <div class="column has-text-right">
+                <p>Updated: {{ .Lastmod | time.Format "2006-01-02" }}</p>
+            </div>
+        </div>
     </div>
-    <hr class="grid-xl mt-0" />
-    <div class="content">
+</section>
+
+<hr>
+
+<section class="section pt-3">
+    <div class="container content">
         {{ .Content }}
     </div>
-</div>
+</section>
 {{ end }}
