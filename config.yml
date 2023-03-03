@@ -2,6 +2,9 @@ baseURL: 'http://example.org/'
 languageCode: en-us
 title: Rigo Moran
 theme: tien
+markup:
+  highlight:
+    style: base16-snazzy
 params:
   socials:
     - name: twitter
@@ -15,7 +18,6 @@ params:
   categories:
     - Web Development
     - Web Design
-
   mainSections:
     - ideas
     - til
