@@ -6,12 +6,9 @@ nav {
 body {
     margin: 0 auto;
     max-width: 50em;
+    font-weight: 500;
 }
 
-.is-medium-icon {
-    width: 1.7rem;
-    height: 1.7rem;
-}
 
 nav h1 {
     color: #363636;
@@ -29,13 +26,38 @@ nav h2 {
 
 hr {
     background-color: #363636;
-    height: 4px;
+    height: 3px;
 }
 
 .bio a {
     border-bottom: .2rem dotted;
 }
 
+.bio h1,
+.bio h2,
+.bio h3 {
+    line-height: 2.5rem;
+}
+
+.is-medium-icon {
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+.post-title {
+    color: #363636;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.125;
+}
+
+
+.post-subtitle {
+    color: #4a4a4a;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
 
 /*
 header {
