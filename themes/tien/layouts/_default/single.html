@@ -7,12 +7,12 @@
         <p class="title">{{ .Title }}</p>
         <p class="subtitle">{{ .Summary }}</p>
         {{ end }}
-        <div class="columns">
+        <div class="columns is-flex">
             <div class="column">
                 <p>Published: {{ .PublishDate | time.Format "2006-01-02" }}</p>
             </div>
             {{ range (first 1 .Params.tags) }}
-            <div class="column has-text-centered">
+            <div class="column has-text-centered is-narrow-mobile">
                 <a href="{{ . }}"><span class="tag is-link">#{{ . }}</span></a>
             </div>
             {{ end }}
