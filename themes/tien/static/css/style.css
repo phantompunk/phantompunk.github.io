@@ -29,6 +29,12 @@ hr {
     height: 3px;
 }
 
+.highlight pre {
+    border-radius: 0.375rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 .bio a {
     border-bottom: .2rem dotted;
 }
