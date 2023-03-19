@@ -15,6 +15,8 @@ params:
       url: 'https://github.com/phantompunk'
     - name: stack-overflow
       url: 'https://stackoverflow.com/users/5776586/rodrigo-moran'
+    - name: hashnode
+      url: 'https://hashnode.com/@rigomoran'
   categories:
     - Web Development
     - Web Design
