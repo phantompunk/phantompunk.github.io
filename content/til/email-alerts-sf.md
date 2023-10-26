@@ -1,13 +1,14 @@
 ---
 date: 2023-10-25
-draft: true
+draft: false
 title: Email Alerts from Snowflake
-subtitle: 
-summary: 
+summary: testing snowflake alerts
 cover: 
 tags:
   - snowflake
+  - sql
   - til
+url: email-alerts-sf
 ---
 # Email Alerts From Snowflake
 
@@ -15,7 +16,7 @@ You can send your team email alerts directly from Snowflake. This is useful when
  - When snowflakes credit usage increases by a percentage
  - Resource consumption for snow pipes increases
 
-You can do this by pairing a Snowflake Alert with a Notification Integration. [Notification Integrations](https://docs.snowflake.com/en/user-guide/alerts) are Snowflake constructs that provide an interface with 3rd party services like queues, email, etc. Email type integrations are natively supported.
+You can do this by pairing a Snowflake Alert with a Notification Integration. [Notification Integrations](https://docs.snowflake.com/en/user-guide/alerts) are Snowflake constructs that provide an interface to 3rd party services (e.g. queues, email, etc). Email-type integrations are natively supported.
 
 1. Create a Notification Integration for Email
 ```sql
@@ -58,7 +59,7 @@ THEN
 	-- Send an email
 ;
 ```
-This is basic syntax for an Alert. It requires a `WAREHOUSE` to handle the compute, a `SCHEDULE` to set the interval, `IF` condition to check for, and `THEN` the action to perform.
+This is the basic syntax for an Alert. It requires a `WAREHOUSE` to handle the compute, a `SCHEDULE` to set the interval, an `IF` condition to check for, and `THEN` the action to perform.
 
 5. Put everything together
 ```sql
