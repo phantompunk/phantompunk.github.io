@@ -1,16 +1,7 @@
 {{ define "main" }}
-<section class="hero is-medium">
-    <div class="hero-body content">
-        <div class="bio">
-            <p>{{ .Content }}</p>
-        </div>
-
-        <div class="pt-2">
-            {{ range .Site.Params.socials }}
-            {{ partial "svg" . }}
-            {{ end }}
-        </div>
+<div class="container mx-auto pt-14 px-4 max-w-md lg:max-w-3xl">
+    <div class="container prose mx-auto leading-normal">
+        {{ .Content }}
     </div>
-</section>
-
+</div>
 {{ end }}

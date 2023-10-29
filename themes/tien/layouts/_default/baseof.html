@@ -3,11 +3,13 @@
 {{- partial "head.html" . -}}
 
 <body>
-    {{- partial "header.html" . -}}
-    <div class="main">
+    <div class="container max-w-md mx-auto sm:px-3">
+        {{- partial "header.html" . -}}
+
         {{- block "main" . }}{{- end }}
+
+        {{- partial "footer.html" . -}}
     </div>
-    {{- partial "footer.html" . -}}
 </body>
 
 </html>
