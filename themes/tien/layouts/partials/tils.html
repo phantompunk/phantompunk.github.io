@@ -1,15 +1,17 @@
-<section class="section">
-    {{ range ( where site.RegularPages "Type" "in" "til" ) }}
-    <div class="columns content is-vcentered">
-        <div class="column">
-            <a href="{{ .Permalink }}">
-                <h3>{{ .Title }}</h3>
-            </a>
-        </div>
-        <div class="column is-vcentered">
-            <h5>{{ .PublishDate | time.Format "Mon, Jan 2, 2006" }} {{ range (first 1 .Params.tags) }}<a class="pl-1">{{
-                    . }}</a>{{ end }}</h5>
-        </div>
-    </div>
-    {{ end }}
-</section>
+<table class="container max-w-md mx-auto table-auto px-4">
+    <thead>
+        <th>Name</th>
+        <th>Date</th>
+        <th class="hidden md:inline">type</th>
+    </thead>
+    <tbody class="container mx-auto px-4 pt-2 text-sm">
+        {{ range ( where site.RegularPages "Type" "in" "til" ) }}
+        <tr>
+            <td class="px-3 pt-1"><a href="{{ .Permalink }}">{{ .Title }}</a></td>
+            <td class="hidden lg:inline">{{ .PublishDate | time.Format "Mon, Jan 2, 2006" }}</td>
+            <td class="lg:hidden">{{ .PublishDate | time.Format "Jan 2006" }}</td>
+            <td class="hidden md:inline">{{ range (first 1 .Params.tags) }}<a class="pl-1">{{ . }}</a>{{ end }}</td>
+        </tr>
+        {{ end }}
+    </tbody>
+</table>

@@ -1,16 +1,14 @@
-<section class="section pt-1">
-    <div class="container">
-        {{ range ( where site.RegularPages "Type" "in" site.Params.mainSections ) }}
-        <div class="block pt-2 pb-4">
-            <a href="{{ .Permalink }}">
-                <p class="post-title">{{ .Title }}</p>
-            </a>
-            <p class="meta pt-1">Published: {{ .PublishDate | time.Format "Jan 2, 2006" }}</p>
-            <p class="post-subtitle py-1">{{ .Summary }}</p>
-            {{ range .Params.tags }}
-            <a href="{{ . }}"><span class="tag is-link">#{{ . }}</span></a>
-            {{ end }}
-        </div>
+<div class="container mx-auto px-3">
+    {{ range ( where site.RegularPages "Type" "in" site.Params.mainSections ) }}
+    <div class="py-3">
+        <p class="text-sm">Published: {{ .PublishDate | time.Format "Jan 2, 2006" }}</p>
+        <a href="{{ .Permalink }}">
+            <h2 class="text-xl font-bold">{{ .Title }}</h2>
+        </a>
+        <p class="text-lg">{{ .Summary }}</p>
+        {{ range .Params.tags }}
+        <a href="{{ . }}"><span class="pr-2">#{{ . }}</span></a>
         {{ end }}
     </div>
-</section>
+    {{ end }}
+</div>
