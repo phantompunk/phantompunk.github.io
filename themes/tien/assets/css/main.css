@@ -1,0 +1,7 @@
+/* h1 {
+    @apply text-3xl font-semibold;
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
