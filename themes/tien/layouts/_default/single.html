@@ -1,33 +1,16 @@
 {{ define "main" }}
-<section class="section pb-1">
-    <div class="container content">
-        {{ if (eq .Type `til`)}}
-        <p class="title has-text-centered">til ~ {{ .Title }}</p>
-        {{ else }}
-        <p class="title">{{ .Title }}</p>
-        <p class="subtitle">{{ .Summary }}</p>
-        {{ end }}
-        <div class="columns is-flex">
-            <div class="column">
-                <p>Published: {{ .PublishDate | time.Format "2006-01-02" }}</p>
-            </div>
-            {{ range (first 1 .Params.tags) }}
-            <div class="column has-text-centered is-narrow-mobile">
-                <a href="{{ . }}"><span class="tag is-link">#{{ . }}</span></a>
-            </div>
-            {{ end }}
-            <div class="column has-text-right">
-                <p>Updated: {{ .Lastmod | time.Format "2006-01-02" }}</p>
-            </div>
-        </div>
-    </div>
-</section>
+<div class="container prose text-sm pt-10">
+    {{ if (eq .Type `til`)}}
+    <h1 class="title has-text-centered">til ~ {{ .Title }}</h1>
+    {{ else }}
+    <h1 class="title">{{ .Title }}</h1>
+    <h3 class="subtitle"><strong>{{ .Summary }}</strong></h3>
+    {{ end }}
+    <h3>Last Updated: {{ .PublishDate | time.Format "2006-01-02" }}</h3>
+    <hr class="my-6 border-y-2 rounded border-black">
+</div>
 
-<hr>
-
-<section class="section pt-3">
-    <div class="container content">
-        {{ .Content }}
-    </div>
-</section>
+<article class="container prose text-sm mx-auto">
+    {{ .Content }}
+</article>
 {{ end }}
