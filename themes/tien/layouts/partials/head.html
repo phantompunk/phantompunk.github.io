@@ -15,7 +15,8 @@
     <link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=16501a3ce87229c3b8ded1f0f4b1b6e7" />
     <link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=16501a3ce87229c3b8ded1f0f4b1b6e7" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+    <!-- <link rel="stylesheet" type="text/css" media="all" href="styling.css"> -->
+    {{ $style := resources.Get "css/style.css" }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
     <title>Rigo Moran</title>
 </head>
