@@ -11,7 +11,6 @@ tags:
   - til
 url: auto-table-schema
 ---
-# Create Table Schema From File
 This is Snowflake specific; You can create a table definition directly from the file you want to ingest by *inferring* the file structure then building a template to create the table:
 
 ```sql

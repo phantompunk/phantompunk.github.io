@@ -4,7 +4,7 @@ title: Rigo Moran
 theme: tien
 markup:
   highlight:
-    style: base16-snazzy
+    style: onedark
 params:
   socials:
     - name: twitter
