@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="container prose text-sm pt-10">
+<div class="container prose text-sm pt-14 px-3 lg:max-w-4xl">
     {{ if (eq .Type `til`)}}
     <h1 class="title has-text-centered">til ~ {{ .Title }}</h1>
     {{ else }}
@@ -10,7 +10,7 @@
     <hr class="my-6 border-y-2 rounded border-black">
 </div>
 
-<article class="container prose text-sm mx-auto">
+<article class="container prose mx-auto">
     {{ .Content }}
 </article>
 {{ end }}
