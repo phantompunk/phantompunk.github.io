@@ -1,10 +1,15 @@
 {{ define "main" }}
-<div class="container mx-auto pt-14 px-3 lg:max-w-3xl">
-    <div class="containuer mx-auto leading-normal text-xl prose">
+<div class="pt-20">
+    <div class="prose text-2xl bg-pink-400">
         {{ .Content }}
     </div>
     <hr class="my-6 border-y-2 rounded border-black">
 </div>
+<!-- <div class="container mx-auto pt-14 px-3 lg:max-w-3xl">
+    <div class="containuer mx-auto leading-normal text-xl prose">
+        {{ .Content }}
+    </div>
+ </div> -->
 
 
 {{ if (eq .Type `til`)}}
