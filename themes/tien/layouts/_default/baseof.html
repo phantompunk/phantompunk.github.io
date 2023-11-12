@@ -3,12 +3,12 @@
 {{- partial "head.html" . -}}
 
 <body class="text-black">
-    <div class="mx-auto p-5 max-w-5xl my-10">
+    <div class="mx-auto p-5 max-w-3xl my-10">
         {{- partial "nav.html" . -}}
 
         {{- block "main" . }}{{- end }}
 
-        <!-- {{- partial "footer.html" . -}} -->
+        {{- partial "footer.html" . -}}
     </div>
 </body>
 
