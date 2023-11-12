@@ -12,7 +12,6 @@
                 <span class="hidden lg:block">{{ .PublishDate | time.Format "Mon, Jan 2, 2006" }}</span>
                 <span class="lg:hidden">{{ .PublishDate | time.Format "Jan 2006" }}</span>
             </td>
-            <!-- <td class="lg:hidden">{{ .PublishDate | time.Format "Jan 2006" }}</td> -->
             <td class="hidden md:block pt-3">{{ range (first 1 .Params.tags) }}<a class="pl-1">{{ . }}</a>{{ end }}
             </td>
         </tr>
