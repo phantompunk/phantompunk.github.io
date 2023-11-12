@@ -2,12 +2,14 @@
 <html lang="{{ site.LanguageCode | default site.Language.Lang  }}">
 {{- partial "head.html" . -}}
 
-<body>
-    {{- partial "header.html" . -}}
-    <div class="main">
+<body class="text-black bg-gray-50">
+    <div class="mx-auto p-5 max-w-3xl my-10">
+        {{- partial "nav.html" . -}}
+
         {{- block "main" . }}{{- end }}
+
+        {{- partial "footer.html" . -}}
     </div>
-    {{- partial "footer.html" . -}}
 </body>
 
 </html>
