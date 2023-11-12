@@ -1,5 +1,8 @@
 {{ define "main" }}
-<section class="pt-24 bg-emerald-700">
+
+{{- partial "header-home.html" . -}}
+
+<section class="pt-24">
     <h2 class=" text-3xl">Latest Posts</h2>
     {{ range first 5 .Site.RegularPages }}
     <div class="pt-5">

@@ -1,10 +1,10 @@
-<table class="container mx-auto table-auto px-4 lg:max-w-3xl">
+<table class="table-auto w-full px-4 mx-auto">
     <thead>
-        <th>Name</th>
-        <th>Date</th>
-        <th class="hidden md:block">type</th>
+        <th class="text-start px-4">Name</th>
+        <th class="text-start">Date</th>
+        <th class="text-start hidden md:block">type</th>
     </thead>
-    <tbody class="container mx-auto px-4 pt-2">
+    <tbody class="px-4 pt-2">
         {{ range ( where site.RegularPages "Type" "in" "til" ) }}
         <tr>
             <td class="px-4"><a href="{{ .Permalink }}">{{ .Title }}</a></td>

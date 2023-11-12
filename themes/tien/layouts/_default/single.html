@@ -1,16 +1,15 @@
 {{ define "main" }}
-<div class="container prose text-sm pt-14 px-3 lg:max-w-4xl">
+<div class="pt-20">
     {{ if (eq .Type `til`)}}
-    <h1 class="title has-text-centered">til ~ {{ .Title }}</h1>
+    <h2 class="text-3xl">til ~ {{ .Title }}</h2>
     {{ else }}
-    <h1 class="title">{{ .Title }}</h1>
-    <h3 class="subtitle"><strong>{{ .Summary }}</strong></h3>
+    <h2 class="text-3xl">{{ .Title }}</h2>
     {{ end }}
     <h3>Last Updated: {{ .PublishDate | time.Format "2006-01-02" }}</h3>
     <hr class="my-6 border-y-2 rounded border-black">
 </div>
 
-<article class="container prose mx-auto">
+<article class="prose-lg w-full mx-auto">
     {{ .Content }}
 </article>
 {{ end }}

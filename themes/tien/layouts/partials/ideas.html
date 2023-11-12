@@ -1,14 +1,11 @@
-<div class="container mx-auto px-3 lg:max-w-4xl">
-    {{ range ( where site.RegularPages "Type" "in" site.Params.mainSections ) }}
-    <div class="py-3">
-        <p class="text-sm">Published: {{ .PublishDate | time.Format "Jan 2, 2006" }}</p>
-        <a href="{{ .Permalink }}">
-            <h2 class="text-xl font-bold">{{ .Title }}</h2>
-        </a>
-        <p class="text-lg">{{ .Summary }}</p>
-        {{ range .Params.tags }}
-        <a href="{{ . }}"><span class="pr-2">#{{ . }}</span></a>
-        {{ end }}
-    </div>
+{{ range ( where site.RegularPages "Type" "in" site.Params.mainSections ) }}
+<div class="pt-5">
+    <p class="font-light">{{ .PublishDate | time.Format "January 2, 2006" }}</p>
+    <a href="{{ .Permalink }}">
+        <p class="text-2xl font-semibold">{{ .Title }}</p>
+    </a>
+    {{ range .Params.tags }}
+    <a href="{{ . }}"><button class="rounded-full bg-blue-500 px-2 py-1 text-sm text-white">#{{ . }}</button></a>
     {{ end }}
 </div>
+{{ end }}
