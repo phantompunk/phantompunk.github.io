@@ -11,11 +11,11 @@ summary: In this guide, we will be building a CLI tool from scratch. No fancy fr
 
 In this guide, we will be building a CLI tool from scratch. No fancy frameworks or libraries -- instead, we are building our own highly minimal framework *loosely* based on [Cobra](https://cobra.dev/).
 
-Here's a taste of what we're building: **:fish: gupi**
+Here's a taste of what we're building: **🐟 gupi**
 
 ![Gupi Help Screen](https://raw.githubusercontent.com/ippontech/blog-usa/master/images/2022/03/help_screen.png "Gupi Help Screen")
 
-| :zap: Disclaimer: Popular CLI frameworks exist for every language. In most cases, you're better off picking your favorite flavor and going with that. |
+| ⚡ Disclaimer: Popular CLI frameworks exist for every language. In most cases, you're better off picking your favorite flavor and going with that. |
 | ------------------------------------------------------------ |
 
 If you have ever wondered how CLI frameworks do what they do, then read on. There are plenty of reasonable use cases for DIY tools. For a practical example, look at Hashicorp (*Terraform, Nomad*). Most, if not all their CLI products use [github.com/mitchellh/cli](https://github.com/mitchellh/cli), a Go CLI Framework developed by the founder.
@@ -28,7 +28,7 @@ Cobra has a deceptively simple API. For example, here is a snippet directly from
 
 This defines a single command *hello*, accepts a list of strings as arguments, and defines the logic to execute the command. The goal for this guide is to create a CLI with a similar look and feel.
 
-Here is the agenda for building **:fish: Gupi**:
+Here is the agenda for building **🐟 Gupi**:
 
 1. [Defining the requirements](#Defining-the-requirements)
 2. [Initializing the CLI](#Initializing-the-CLI)
@@ -46,7 +46,7 @@ You view the full source while following along at [Gupi](https://github.com/phan
 
 Keep in mind that _what_ we are building does not matter as much as *_how_* we are building it. It could easily be adapted to do whatever you need.
 
-**:fish: Gupi** will be able to add, edit, list, delete, and create templates. The commands or features will be defined as follows:
+**🐟 Gupi** will be able to add, edit, list, delete, and create templates. The commands or features will be defined as follows:
 
 - *Add*: Adds an existing template to the collection via a local file
 
@@ -758,7 +758,7 @@ $ gupi
 
 You just built a CLI from scratch and hopefully learned a few things along the way.
 
-Here is a brief walkthrough of what you can do with **:fish: Gupi**
+Here is a brief walkthrough of what you can do with **🐟 Gupi**
 
 ![demo](https://raw.githubusercontent.com/ippontech/blog-usa/master/images/2022/03/gupi_demo.gif)
 
