@@ -10,7 +10,6 @@ tags:
   - til
 url: email-alerts-sf
 ---
-
 You can send your team email alerts directly from Snowflake. This is useful when you want to monitor:
  - When snowflakes credit usage increases by a percentage
  - Resource consumption for snow pipes increases
