@@ -11,7 +11,9 @@ tags:
   - til
 url: manage-git-configs
 ---
-There's a better way to manage all your Git profiles. You can. use theYou can manage all your Git profiles by creating multiple sub configs. multiple configs and overriding git config settings. This enables overriding your settings or email address based on the git directory.
+There's a better way to manage all your Git profiles. You can. use the.
+
+You can manage all your Git profiles by creating multiple sub configs. multiple configs and overriding git config settings. This enables overriding your settings or email address based on the git directory.
 
 For example, say you have separate Git profiles for personal, work, and client work. You would then need 3 `.gitconfig` files, like this:
 
