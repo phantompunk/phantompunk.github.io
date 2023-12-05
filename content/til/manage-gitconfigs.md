@@ -1,6 +1,6 @@
 ---
 date: 2023-10-11
-draft: true
+draft: false
 title: Manage Git Configs
 subtitle: 
 summary: 
@@ -17,7 +17,6 @@ There's a better way to manage all your Git profiles. By adding:
 [includeIf "gitdir:/path/to/group/"]
     path = /path/to/foo.inc
 ```
-
 
 to your main git config you can conditionally include config options from another source. This essentially enables having multiple git configs for each git identity.
 
