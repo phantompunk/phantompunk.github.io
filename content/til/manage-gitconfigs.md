@@ -18,6 +18,7 @@ There's a better way to manage all your Git profiles. By adding:
     path = /path/to/foo.inc
 ```
 
+
 to your main git config you can conditionally include config options from another source. This essentially enables having multiple git configs for each git identity.
 
 For example, say you have 3 separate Git profiles for personal, clientA, and clientB. You would then need 3 `.gitconfig` files, like this:
