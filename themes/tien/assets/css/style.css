@@ -1485,6 +1485,10 @@ pre {
   overflow-x: auto
 }
 
+ul {
+  list-style: disc;
+}
+
 @media (min-width: 640px) {
   .sm\:text-xl {
     font-size: 1.25rem;

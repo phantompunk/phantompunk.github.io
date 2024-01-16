@@ -7,7 +7,7 @@
     <tbody class="px-4 pt-2">
         {{ range ( where site.RegularPages "Type" "in" "til" ) }}
         <tr>
-            <td class="px-4 pt-3"><a href="{{ .Permalink }}">{{ .Title }}</a></td>
+            <td class="px-4 pt-3"><a href="{{ .Permalink }}">{{ lower .Title }}</a></td>
             <td class="pt-3">
                 <span class="hidden lg:block">{{ .PublishDate | time.Format "Mon, Jan 2, 2006" }}</span>
                 <span class="lg:hidden">{{ .PublishDate | time.Format "Jan 2006" }}</span>

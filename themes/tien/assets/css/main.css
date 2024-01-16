@@ -9,3 +9,7 @@
 pre {
   overflow-x: auto
 }
+
+ul {
+  list-style: disc;
+}
