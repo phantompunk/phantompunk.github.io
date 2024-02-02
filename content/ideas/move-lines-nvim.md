@@ -2,7 +2,9 @@
 title: Move lines around in Neovim
 date: 2023-02-05
 draft: false
-tags: [vim, til]
+tags:
+  - vim
+  - til
 url: move-lines-in-nvim
 summary: How to set up keymaps to move lines up or down in neovim
 ---
