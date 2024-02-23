@@ -1,53 +1,44 @@
 ---
-title: How to test drive Google APIs
-subtitle: An example subtitle
+title: Test drive Google APIs
+subtitle: 
 slug: google-api-playground
 tags:
   - api
   - google
   - playground
   - til
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1649662225945/7f_c6UxhR.jpg?auto=compress
-draft: true
+cover: 
+draft: false
 date: 2024-01-23
 ---
-Working with Google APIs can be daunting with sheer amount of them, auth flows, all the available libraries especially if you want to quickly query something or extract a few files.
+Working with Google APIs can feel overwhelming due to the variety of APIs, auth processes, and all the available libraries. To address this, Google put together an [API Playground]() to quickly define your scope, authenticate, request refresh tokens, and execute queries.
 
-They've made this process easier to get started by creating an [api playground](https://developers.google.com/oauthplayground/). This enables you to easily define your scope, authenticate yourself, request tokens, and execute requests.
-
+Here's the breakdown:
 1. Select an API & authorize your scope
-2. Request a *Refresh Token* and *Access Token*
+2. Request a _Refresh Token_ and _Access Token_
 3. Pick an API Endpoint
 4. Construct a request & send
 
-Access Tokens are good for an hour. Obviously not a good solution for anything long lived but perfect for exploring an API or performing a quick operation.
+Keep in mind *Access Tokens* are only valid for an **hour**. Not suitable for a long-term solution but perfect for exploring an API or executing quick operations.
 
-Below is a sample request for listing available task lists from the Google Tasks API:
+For example, here's a sample HTTP request for listing available task lists from the Google Tasks API:
 ```http
 GET /tasks/v1/users/@me/lists HTTP/1.1
 Host: tasks.googleapis.com
 Content-length: 0
-Authorization: Bearer ya31.a3AnCzNB1uXt4zkNEgWhfeNczMGiUDWx_IWKkYrR07V07EntMUVvQ0171
+Authorization: Bearer ya31.a3AnCzNB1uXt4zUVvQ0171
 ```
 
-Which can then be easily converted into a curl request or python script:
-```bash
-export TOKEN=ya31.a3AnCzNB1uXt4zkNEgWhfeNczMGiUDWx_IWKkYrR07V07EntMUVvQ0171
-curl -X GET "https://tasks.googleapis.com/tasks/v1/users/@me/lists" \
-      -H "Authorization: Bearer $TOKEN"
+If we extract the *access token* we easily convert this into a Python script:
+```python
+import os
+import requests
 
-{
-  "kind": "tasks#taskLists",
-  "etag": "\"LTc3MTU3MTMyMg\"",
-  "items": [
-    {
-      "kind": "tasks#taskList",
-      "id": "MDEyNjQ3OTE1MDcyOTg2OTM0ODM6MDow",
-      "etag": "\"MTUyNDA3OTE3OQ\"",
-      "title": "Rodrigo Moran's list",
-      "updated": "2024-01-30T14:48:16.033Z",
-      "selfLink": "https://www.googleapis.com/tasks/v1/users/@me/lists/MDEyNjQ3OTE1MDcyOTg2OTM0ODM6MDow"
-    }
-  ]
-}
+URL = "https://tasks.googleapis.com/tasks/v1/users/@me/lists"
+TOKEN = os.environ.get("GOOGLE_API_TOKEN")
+
+headers = {"Authorization": f"Bearer {TOKEN}"}
+tasklists = requests.get(URL, headers).json()
+
+print(tasklists)
 ```
