@@ -20,6 +20,9 @@
      
 
     {{ $style := resources.Get "css/style.css" }}
+    
+    {{ if (ne .Type `talks`) }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
+    {{ end }}
     <title>{{ .Site.Title }}</title>
 </head>
