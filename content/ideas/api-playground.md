@@ -8,6 +8,7 @@ tags:
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1713473996738/1c04ad7b-2a9a-4bf9-9d0a-0ca46742c360.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp
 draft: false
 date: 2024-01-23
+url: google-api-playground
 ---
 Working with Google APIs can feel overwhelming due to the variety of APIs, processes around authentication/authorization, requesting appropriate scopes, and navigating all the available libraries.
 

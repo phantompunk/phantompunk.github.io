@@ -10,6 +10,7 @@ draft: false
 date: 2024-08-10
 seoTitle: Fix Git GPG Signing Problems
 seoDescription: How to debug and fix Git GPG signing issues, including tracing and identifying problems such as expired GPG keys
+url: debug-git-gpg
 ---
 
 I'm relatively new to signing my commits. And I recently stumbled into a new somewhat cryptic Git error. Here's what I did to debug the problem. Hope it helps you.

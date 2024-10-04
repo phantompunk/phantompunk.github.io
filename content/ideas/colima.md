@@ -1,6 +1,9 @@
 ---
 title: Replace Docker Desktop with Colima
 subtitle: Moving to Colima as a replacement for Docker Desktop
+seoTitle: "Colima: Lightweight Docker Desktop Alternative"
+seoDescription: Minimal, fast CLI, Colima replaces Docker Desktop for macOS with support for BuildKit & Compose
+url: colima
 slug: colima
 tags:
   - containers
