@@ -1,29 +1,23 @@
 {{ define "main" }}
-<div class="pt-20">
+<div class="pt-20 pb-20">
     <div class="prose text-2xl">
         {{ .Content }}
     </div>
-    <hr class="my-6 border-y-2 rounded border-black">
+    <!-- <hr class="my-6 border-y-2 rounded border-black"> -->
 </div>
 
-<table class="table-auto w-full px-4 mx-auto sm:text-xl">
-    <thead>
-        <th class="text-start px-4">Name</th>
-        <th class="text-start">Date</th>
-        <th class="text-start hidden md:block">type</th>
-    </thead>
-    <tbody class="px-4 pt-2">
-        {{ range ( where site.RegularPages "Params.tags" "intersect" (slice "til") ) }}
-        <tr>
-            <td class="px-4 pt-3"><a href="{{ .Permalink }}">{{ .Title }}</a></td>
-            <td class="pt-3">
-                <span class="hidden lg:block">{{ .PublishDate | time.Format "Mon, Jan 2, 2006" }}</span>
-                <span class="lg:hidden">{{ .PublishDate | time.Format "Jan 2006" }}</span>
-            </td>
-            <td class="hidden md:block pt-3">{{ range (first 1 .Params.tags) }}<a class="pl-1">{{ . }}</a>{{ end }}
-            </td>
-        </tr>
-        {{ end }}
-    </tbody>
-</table>
+<div class="pb-10">
+    {{ range ( where site.RegularPages "Params.tags" "intersect" (slice "til") ) }}
+    <a class="flex p-2" href="{{ .Permalink }}" style="border-bottom: solid 1px #555765;">
+        <span class="flex-auto font-medium text-lg text-start">{{ .Title }}
+            {{ range (.Params.Tags) }}
+                {{ if ne . "til" }}
+                <span class="text-sm font-normal bg-blue rounded-md px-2 {{ . }}" style="color:#f6f8ff">{{ . }}</span>
+                {{ end }}     
+            {{ end }}
+        </span>
+        <span class="font-medium text-end" style="color:#555765; flex:0 0 auto">{{ .PublishDate | time.Format "2 Jan 06" }}</span>
+    </a>
+    {{ end }}
+</div>
 {{ end }}
