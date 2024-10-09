@@ -8,7 +8,7 @@
 
 <div class="pb-10">
     {{ range ( where site.RegularPages "Params.tags" "intersect" (slice "til") ) }}
-    <a class="flex p-2" href="{{ .Permalink }}" style="border-bottom: solid 1px #555765;">
+    <a class="flex p-2" href="{{ .Permalink }}" style="border-bottom: solid 1px #555765; gap:30px">
         <span class="flex-auto font-medium text-lg text-start">{{ .Title }}
             {{ range (.Params.Tags) }}
                 {{ if ne . "til" }}
