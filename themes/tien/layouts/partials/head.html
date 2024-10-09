@@ -2,9 +2,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" href="images/favicon.ico" sizes="any">
-    <link rel="icon" href="images/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="icon" href={{ "favicon.ico" | absURL }} sizes="any">
+    <link rel="icon" href={{ "icon.svg" | absURL }} type="image/svg+xml">
+    <link rel="apple-touch-icon" href={{ "apple-touch-icon.png" | absURL }} type="image/png">
 
     <title>{{ .Title | default .Site.Title }}</title>
     <meta name="author" content="{{ .Site.Title }}">
@@ -37,4 +38,5 @@
     {{ $style := resources.Get "css/style.css" }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
     {{ end }}
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
