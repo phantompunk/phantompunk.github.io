@@ -33,8 +33,6 @@
 
     {{ partial "robots" . }}
 
-    {{ partial "favicon" . }}
-
     {{ if (ne .Type `talks`) }}
     {{ $style := resources.Get "css/style.css" }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
