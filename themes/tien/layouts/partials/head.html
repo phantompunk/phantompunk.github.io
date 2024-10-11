@@ -35,10 +35,7 @@
     {{ partial "robots" . }}
 
     {{ if (ne .Type `talks`) }}
-    {{ $style := resources.Get "css/style.css" }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
-    {{ $main := resources.Get "css/main.css" }}
+    {{ $main := resources.Get "/css/main.css" }}
     <link rel="stylesheet" href="{{ $main.Permalink }}">
     {{ end }}
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>

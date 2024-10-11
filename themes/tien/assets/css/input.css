@@ -1,0 +1,55 @@
+/* h1 {
+    @apply text-3xl font-semibold;
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+pre {
+  overflow-x: auto
+}
+
+ul {
+  list-style: disc;
+}
+
+.go {
+  background-color: #2BBE95;
+}
+.python {
+  background-color: #850C9A;
+}
+.shell {
+  background-color: #68DC06;
+}
+.ai {
+  background-color: #8F0869;
+}
+.docker {
+  background-color: #5A5D6E;
+}
+.vim {
+  background-color: #4A742D;
+}
+.sql {
+  background-color: #98636A;
+}
+.api {
+  background-color: #2BBE95;
+}
+.fish {
+  background-color: #B6516E;
+}
+.git {
+  background-color: #ED4C5F;
+}
+.aws {
+  background-color: #EDC74C;
+}
+.containers {
+  background-color: #5A6E5E;
+}
+.snowflake {
+  background-color: #1a3e60;
+}
