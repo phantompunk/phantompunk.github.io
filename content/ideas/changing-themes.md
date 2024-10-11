@@ -5,6 +5,7 @@ summary: Summary of the example
 date: 2024-01-25
 draft: true
 slug: theme-toggle-for-kitty-nvim
+url: theme-toggle-for-kitty-nvim
 tags:
   - vim
   - fish

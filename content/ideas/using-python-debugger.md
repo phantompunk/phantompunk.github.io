@@ -5,6 +5,7 @@ summary: Summary of the example
 date: 2024-03-21
 draft: true
 slug: using-python-debugger
+url: using-python-debugger
 tags:
   - til
   - python
