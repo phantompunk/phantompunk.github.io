@@ -6,9 +6,9 @@
     <hr class="my-6 border-y-2 rounded border-black">
 </div>
 
-{{ if (eq .Type `til`)}}
+{{ if (eq .Type `til`) }}
 {{- partial "tils.html" . -}}
-{{ else }}
+{{ else if (eq .Type `ideas`) }}
 {{- partial "ideas.html" . -}}
 {{ end }}
 

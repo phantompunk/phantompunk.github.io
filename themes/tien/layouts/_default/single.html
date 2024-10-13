@@ -1,4 +1,11 @@
 {{ define "main" }}
+{{ if (eq .Type `projects`) }}
+<div class="pt-20">
+    <div class="prose text-2xl">
+        {{ .Content }}
+    </div>
+</div>
+{{ else }}
 <div class="pt-20">
     {{ if (eq .Type `til`)}}
     <h2 class="text-3xl">til ~ {{ .Title }}</h2>
@@ -12,4 +19,5 @@
 <article class="prose-lg w-full mx-auto">
     {{ .Content }}
 </article>
+{{ end }}
 {{ end }}
