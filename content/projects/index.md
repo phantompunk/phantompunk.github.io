@@ -1,8 +1,17 @@
 ---
 type: "projects"
-url: "projects"
-slug: "projects"
+title: "Projects"
 ---
+## Projects
+
+* [**Gupi**](https://github.com/phantompunk/gupi) is a template manager and rendered written in Go.
+    
+* [**Stencil**](https://github.com/phantompunk/stencil) a Figlet Font renderer and TUI are also written in Go.
+    
+* [**Dotfiles**](https://github.com/phantompunk/dotfiles) my personal config settings for working and living the terminal.
+
+* [**Vivify**](https://github.com/lemma-io/vivify) an Android alarm clock leveraging Spotify's SDK before it was cool. Unlisted.
+
 ## Jobs
 
 I currently work at [Ippon Technologies](https://ipponusa.com/) a boutique global consulting firm delivering cloud, data, and software engineering. During my time I’ve worked on several client projects in varying industries, capacities, and stacks.
@@ -30,15 +39,6 @@ During my undergrad I worked at:
 * **Gallium Technologies, now** [**AnsoniaCredit**](https://ansoniacreditdata.com/index.html) went through a series of acquisitions a few years after I left, and now it’s been acquired by [**Equifax**](https://www.equifax.com/). It automated the collections process by accessing custom payment portals directly. I mostly wrote web scrapers in Java. Hotfixing and maintenance were a large part of the job.
     
 
-## Projects
-
-* [**Gupi**](https://github.com/phantompunk/gupi) is a template manager and rendered written in Go.
-    
-* [**Stencil**](https://github.com/phantompunk/stencil) a Figlet Font renderer and TUI are also written in Go.
-    
-* [**Vivify**](https://github.com/lemma-io/vivify) an Android alarm clock leveraging Spotify's SDK before it was cool.
-    
-* [**Dotfiles**](https://github.com/phantompunk/dotfiles) my personal config settings for working and living the terminal.
     
 
 ## Talks
