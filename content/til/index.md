@@ -1,5 +1,7 @@
 ---
 type: "til"
+url: "til"
+slug: "til"
 ---
 
 *TIL* ~> **today i learned**
