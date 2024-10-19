@@ -43,4 +43,4 @@ During my undergrad I worked at:
     24' [RVADE](https://www.meetup.com/rva-data-engineering/events/301001722/) • Richmond VA – [slides](https://rigomoran.com/genai/)
     
 * **For loops to worker pools**  
-    Apr 20' [GolangDC](https://www.meetup.com/golang-dc/events/268979078/) • online – slides
+    Apr 20' [GolangDC](https://www.meetup.com/golang-dc/events/268979078/) • online – [slides](https://drive.google.com/file/d/1c9wMfTo55lZEyxlZEY8EEVWViaRKwXVp/view?usp=sharing)
