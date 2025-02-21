@@ -1,36 +1,16 @@
-<div class="flex justify-between w-full">
-    <div id="logo" class="flex-none w-16">
-    {{ if .Site.Params.Logo }}
-    {{ $logo := print "/assets/icons/" .Site.Params.logo ".svg" }}
-    {{ if fileExists $logo }}
-    <a href="{{ "/" | relLangURL }}" title="home">
-        {{ readFile $logo | safeHTML }}
-    </a>
-    {{ else }}
-    <div class="flex-none text-4xl font-semibold">
-        <a href="{{ .Site.Home.RelPermalink }}">
-            {{ .Site.Title }}
-        </a>
-    </div>
+{{ $current := .RelPermalink }}
+<nav class="flex items-center justify-center space-x-3 text-xl">
+    {{ range .Site.Menus.main }}
+    <a class="{{ if eq $current .PageRef }}{{ print `font-semibold` }}{{end}}" href="{{ .PageRef }}">{{
+        .Name}}</a>
     {{ end }}
-    {{ end }}
-    </div>
 
-    <nav class="flex space-x-5"></nav>
-    <nav class="flex space-x-3 text-2xl items-center">
-        {{ range .Site.Menus.main }}
-        <a href="{{ .PageRef }}" class="flex item-center">{{ .Name }}</a>
-        {{ end }}
-
-        <!-- TODO: enable dark model toggle -->
-        <!-- {{ $dark := print "/assets/icons/" "moon" ".svg" }} -->
-        <!-- {{ if fileExists $dark }} -->
-        <!-- <div class="flex items-center"> -->
-        <!--     <span class="flex w-5 items-center"> -->
-        <!--         {{ readFile $dark | safeHTML }} -->
-        <!--     </span> -->
-        <!-- </div> -->
-        <!-- {{ end }} -->
-    </nav>
-
-</div>
+    <!--{{ $dark := print "/assets/icons/" "moon" ".svg" }}-->
+    <!--{{ if fileExists $dark }}-->
+    <!--<button onclick="themeToggle()" class="flex items-center">-->
+    <!--    <span class="flex w-5 items-center">-->
+    <!--        {{ readFile $dark | safeHTML }}-->
+    <!--    </span>-->
+    <!--</button>-->
+    <!--{{ end }}-->
+</nav>

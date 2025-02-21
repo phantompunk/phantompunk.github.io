@@ -1,14 +1,23 @@
 {{ define "main" }}
+<article class="text-xl prose pt-20">
+    {{ .Content }}
+</article>
 
-{{- partial "header-home.html" . -}}
+<!--<div class="flex mx-auto items-center space-x-3 justify-start pt-5">-->
+<!--    {{ range .Site.Params.socials }}-->
+<!--    <div class="py-5 w-8">-->
+<!--        {{ partial "svg" . }}-->
+<!--    </div>-->
+<!--    {{ end }}-->
+<!--</div>-->
 
 <section class="pt-24 mx-auto">
-    <h2 class=" text-3xl">Latest Posts</h2>
+    <h2 class=" text-xl">Latest Posts</h2>
     {{ range first 5 (where .Site.RegularPages "Section" "in" .Site.MainSections) }}
     <div class="pt-5">
         <p class="font-light">{{ .PublishDate | time.Format "January 2, 2006" }}</p>
         <a href="{{ .Permalink }}">
-            <p class="text-2xl font-semibold">{{ .Title }}</p>
+            <p class="text-xl font-semibold">{{ .Title }}</p>
         </a>
     </div>
     {{ end}}

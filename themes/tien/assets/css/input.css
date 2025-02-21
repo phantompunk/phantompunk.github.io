@@ -1,10 +1,18 @@
-/* h1 {
-    @apply text-3xl font-semibold;
-} */
+
+@import url('https://fonts.googleapis.com/css2?family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Fredoka", "sans-serif"; 
+  --tw-prose-body: oklch(92.252% 0.0254 268.58);
+}
 
 pre {
   overflow-x: auto
@@ -13,6 +21,67 @@ pre {
 ul {
   list-style: disc;
 }
+
+:root {
+  --color-bg: oklch(77.2% 0.112 74)
+  --color-fg: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: oklch(23.67% 0.0675 265.74);
+    --color-fg: oklch(92.252% 0.0254 268.58);
+    --tw-prose-body: oklch(92.252% 0.0254 268.58);
+  }
+
+  .prose {
+    --tw-prose-body: oklch(92.252% 0.0254 268.58);
+    --tw-prose-headings: oklch(92.252% 0.0254 268.58);
+    --tw-prose-links: oklch(92.252% 0.0254 268.58);
+    --tw-prose-bold: oklch(92.252% 0.0254 268.58);
+
+
+  }
+}
+
+/*.dark {*/
+/*  --color-bg: oklch(25.335% 0.07396 7.316)*/
+/*  --color-fg: #b5c0ec;*/
+/*  --color-muted: #14122b;*/
+/*  --color-muted-foreground: #65758b;*/
+/*  --color-primary: #f7dcb0;*/
+/*  --color-primary-foreground: #f7dcb0;*/
+/*  --color-accent: #fff;*/
+/*  --color-accent-foreground: #fff;*/
+/*  --color-destructive-foreground: #f87272;*/
+/*  --color-border: #2e405c;*/
+/*  --color-ring: #f7dcb0;*/
+/*  --color-input: #131221;*/
+/*}*/
+
+body {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  /*background-image: url(bg-noise.webp);*/
+  /*background-repeat: repeat;*/
+  /*background-size: 200px 200px;*/
+  /*mix-blend-mode: soft-light;*/
+  /*opacity: 0.325;*/
+  /*pointer-events: none;*/
+}
+
+/*html {*/
+/*  background: #0F1C3E;*/
+/*}*/
+
+/*body {*/
+/*  background-image: url(../../bg-noise.webp);*/
+/*  background-repeat: repeat;*/
+/*  background-size: 200px 200px;*/
+/*  mix-blend-mode: soft-light;*/
+/*  opacity: 0.125;*/
+/*  pointer-events: none;*/
+/*}*/
 
 .go {
   background-color: #2BBE95;
@@ -52,4 +121,8 @@ ul {
 }
 .snowflake {
   background-color: #1a3e60;
+}
+
+.linux {
+  background: #96b6a7;
 }
