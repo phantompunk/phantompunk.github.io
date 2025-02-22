@@ -1,4 +1,10 @@
-{{ range ( where site.RegularPages "Type" "in" site.Params.mainSections ) }}
+{{ $pages := where .Site.RegularPages "Section" "ideas" }}
+
+{{ with .Scratch.Get "limit" }}
+{{ $pages = first . $pages }}
+{{ end }}
+
+{{ range $pages }}
 <div class="pt-5">
     <p class="font-light">{{ .PublishDate | time.Format "January 2, 2006" }}</p>
     <a href="{{ .Permalink }}">

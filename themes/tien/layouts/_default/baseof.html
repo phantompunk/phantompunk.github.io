@@ -2,7 +2,7 @@
 <html lang="{{ site.LanguageCode | default site.Language.Lang  }}">
 {{- partial "head.html" . -}}
 
-<body class="">
+<body class="bg-noise">
     <div class="mx-auto p-3 max-w-prose my-2">
         {{- partial "nav.html" . -}}
 
@@ -11,17 +11,5 @@
         {{- partial "footer.html" . -}}
     </div>
 </body>
-
-<script>
-    function themeToggle() {
-        console.log("etst")
-        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-        document.documentElement.classList.toggle(
-            "dark",
-            localStorage.theme === "dark" ||
-            (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches),
-        );
-    }
-</script>
 
 </html>
