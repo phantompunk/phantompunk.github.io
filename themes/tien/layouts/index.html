@@ -16,19 +16,7 @@
 
 <section class="pt-24 mx-auto">
     <h2 class="text-xl text-center"><em>Latest Posts</em></h2>
-    <ul class="list-none">
-        {{ range .Site.RegularPages | first 5 }}
-        <li class="pt-5">
-            <a class="inline-block font-medium text-xl" href="">{{ .Title }}</a>
-            <p class="inline-block font-light pl-2"> {{ .PublishDate | time.Format "2 Jan 06" }}</p>
-            <div class="pb-2">
-                {{ or .Summary .Content | strings.Truncate 80 }}
-            </div>
-            {{ range .Params.tags }}
-            <span class="px-2 mr-1 psy-1 text-sm rounded-md {{ . }}">{{ . }}</span>
-            {{ end }}
-        </li>
-        {{ end }}
-    </ul>
+    {{ .Scratch.Set "index" 5 }}
+    {{- partial "ideas.html" . -}}
 </section>
 {{ end }}

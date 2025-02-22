@@ -7,31 +7,22 @@ markup:
     style: onedark
 menus:
   main:
-  - name: Ideas
-    pageRef: /ideas
+  - name: About
+    pageRef: /
+    weight: 5
+  - name: Writing
+    pageRef: /ideas/
     weight: 10
-  - name: Til
-    pageRef: /til
+  - name: Notes
+    pageRef: /til/
     weight: 20
   - name: Projects
-    pageRef: /projects
+    pageRef: /projects/
     weight: 30
 
 params:
   # Add svg logo to assets folder
   logo: 'logo'
-
-  # social accounts
-  # socials:
-  # github: 'github_id'
-  # gitlab: 'gitlab_id'
-  # twitter: 'twitter_id'
-  # linkedin: 'linkedin_id'
-  # mastadon: 'mastadon_id'
-  # hashnode: 'hashnode_id'
-  # bluesky: 'bluesky_id'
-  # stack-overflow: 'stack_overflow_id'
-  
   socials:
     - name: twitter
       url: 'https://twitter.com/rigomoran_'

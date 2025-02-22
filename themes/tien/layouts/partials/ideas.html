@@ -1,18 +1,20 @@
-{{ $pages := where .Site.RegularPages "Section" "ideas" }}
+{{ $pages := where .Site.RegularPages "Section" "!=" "" }}
 
 {{ with .Scratch.Get "limit" }}
 {{ $pages = first . $pages }}
 {{ end }}
 
-{{ range $pages }}
-<div class="pt-5">
-    <p class="font-light">{{ .PublishDate | time.Format "January 2, 2006" }}</p>
-    <a href="{{ .Permalink }}">
-        <p class="text-2xl font-semibold">{{ .Title }}</p>
-    </a>
-    {{ range .Params.tags }}
-    <!-- <a href="{{ . }}"><button class="rounded-full bg-blue-500 px-2 py-1 text-sm text-white">#{{ . }}</button></a> -->
-    <span class="px-1 py-1 text-sm">#{{ . }}</span>
+<ul class="list-none">
+    {{ range $pages }}
+    <li class="pt-5">
+        <a class="inline-block font-medium text-xl" href="{{ .Permalink }}">{{ .Title }}</a>
+        <p class="inline-block font-light pl-2"> {{ .PublishDate | time.Format "2 Jan 06" }}</p>
+        <div class="pb-2">
+            {{ or .Summary .Content | strings.Truncate 80 }}
+        </div>
+        {{ range .Params.tags }}
+        <span class="px-2 mr-1 psy-1 text-sm rounded-md {{ . }}">{{ . }}</span>
+        {{ end }}
+    </li>
     {{ end }}
-</div>
-{{ end }}
+</ul>

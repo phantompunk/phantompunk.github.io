@@ -1,14 +1,10 @@
 {{ define "main" }}
-<div class="pt-20">
-    <div class="prose text-xl">
-        {{ .Content }}
-    </div>
-    <hr class="my-6 border-y-2 rounded border-black">
-</div>
+<article class="text-xl prose py-20">
+    {{ .Content }}
+</article>
 
-{{ if (eq .Type `til`) }}
-{{- partial "tils.html" . -}}
-{{ else if (eq .Type `ideas`) }}
+
+{{ if (eq .Type `ideas`) }}
 {{- partial "ideas.html" . -}}
 {{ end }}
 
