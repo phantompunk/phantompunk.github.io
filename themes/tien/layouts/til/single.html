@@ -11,7 +11,7 @@
         <span class="flex-auto font-medium text-lg text-start">{{ .Title }}
             {{ range (.Params.Tags) }}
             {{ if ne . "til" }}
-            <span class="text-sm font-normal bg-blue rounded-md px-2 {{ . }}" style="color:#f6f8ff">{{ . }}</span>
+            <span class="text-sm font-mono bg-blue rounded-md px-2 {{ . }}" style="color:#f6f8ff">{{ . }}</span>
             {{ end }}
             {{ end }}
         </span>

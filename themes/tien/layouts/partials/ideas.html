@@ -6,15 +6,15 @@
 
 <ul class="list-none">
     {{ range $pages }}
-    <li class="pt-5">
-        <a class="inline-block font-medium text-xl" href="{{ .Permalink }}">{{ .Title }}</a>
-        <p class="inline-block font-light pl-2"> {{ .PublishDate | time.Format "2 Jan 06" }}</p>
-        <div class="pb-2">
-            {{ or .Summary .Content | strings.Truncate 80 }}
+    <li class="">
+        <p class="nline-block font-extralight ">{{ .PublishDate | time.Format "2 Jan 06" }}</p>
+        <a class="inline-block font-medium text-2xl" href="{{ .Permalink }}">{{ .Title }}</a>
+        <div class="pb-10">
+            {{ or .Summary .Content | strings.Truncate 120 }}
         </div>
-        {{ range .Params.tags }}
-        <span class="px-2 mr-1 psy-1 text-sm rounded-md {{ . }}">{{ . }}</span>
-        {{ end }}
+        <!--{{ range .Params.tags }}-->
+        <!--<span class="font-mono px-2 mr-1 py-1 text-sm rounded-md {{ . }}">{{ . }}</span>-->
+        <!--{{ end }}-->
     </li>
     {{ end }}
 </ul>

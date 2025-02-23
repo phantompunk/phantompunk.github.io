@@ -10,13 +10,13 @@
     {{ end }}
 </div>
 
-<article class="text-xl prose pt-7">
+<article class="text-xl prose pt-7 pb-20">
     {{ .Content }}
 </article>
 
-<section class="pt-24 mx-auto">
-    <h2 class="text-xl text-center"><em>Latest Posts</em></h2>
-    {{ .Scratch.Set "index" 5 }}
+<section class="">
+    <h2 class="text-xl text-center pb-10"><em>Latest Posts</em></h2>
+    {{ .Scratch.Set "limit" 3 }}
     {{- partial "ideas.html" . -}}
 </section>
 {{ end }}
