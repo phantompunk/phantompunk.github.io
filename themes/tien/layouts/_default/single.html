@@ -1,35 +1,14 @@
 {{ define "main" }}
 <div class="pt-20">
-    <h3><em>TIL</em> ~> <strong>today i learned</strong></h3>
+    <h3>{{- partial "postheader.html" . -}}</h3>
     <h1 class="font-medium text-2xl">{{ .Title }}</h1>
     <h3>{{- partial "date.html" . -}}</h3>
     {{ range .Params.tags }}
     <span class="px-2 mr-1 psy-1 text-sm rounded-md {{ . }}">{{ . }}</span>
     {{ end }}
 </div>
-<article class="text-xl prose py-20">
+
+<article class="text-xl prose py-10">
     {{ .Content }}
 </article>
-<!--<h1>Single HTML</h1>-->
-<!--{{ if (eq .Type `projects`) }}-->
-<!--<div class="pt-20">-->
-<!--    <div class="prose text-xl">-->
-<!--        {{ .Content }}-->
-<!--    </div>-->
-<!--</div>-->
-<!--{{ else }}-->
-<!--<div class="pt-20">-->
-<!--    {{ if (eq .Type `til`)}}-->
-<!--    <h2 class="text-3xl">til ~ {{ .Title }}</h2>-->
-<!--    {{ else }}-->
-<!--    <h2 class="text-3xl">{{ .Title }}</h2>-->
-<!--    {{ end }}-->
-<!--    <h3>Last Updated: {{ .PublishDate | time.Format "2006-01-02" }}</h3>-->
-<!--    <hr class="my-6 border-y-2 rounded border-black">-->
-<!--</div>-->
-<!---->
-<!--<article class="prose-lg w-full mx-auto">-->
-<!--    {{ .Content }}-->
-<!--</article>-->
-<!--{{ end }}-->
 {{ end }}

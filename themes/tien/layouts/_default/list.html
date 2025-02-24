@@ -3,9 +3,10 @@
     {{ .Content }}
 </article>
 
-
 {{ if (eq .Type `ideas`) }}
 {{- partial "ideas.html" . -}}
+{{ else if (eq .Type `til`) }}
+{{- partial "tils.html" . -}}
 {{ end }}
 
 {{ end }}

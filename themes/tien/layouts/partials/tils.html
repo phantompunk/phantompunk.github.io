@@ -1,0 +1,19 @@
+{{ $pages := where .Site.RegularPages "Type" "in" (slice "til") }}
+
+{{ with .Scratch.Get "limit" }}
+{{ $pages = first . $pages }}
+{{ end }}
+
+{{ range $pages }}
+<a class="flex p-2" href="{{ .Permalink }}" style="border-bottom: solid 1px #555765; gap:30px">
+    <span class="flex-auto font-medium text-lg text-start">{{ .Title }}
+        {{ range (.Params.Tags) }}
+        {{ if ne . "til" }}
+        <span class="text-sm font-mono bg-blue rounded-md px-2 {{ . }}" style="color:#f6f8ff">{{ . }}</span>
+        {{ end }}
+        {{ end }}
+    </span>
+    <span class="font-medium text-end" style="color:#555765; flex:0 0 auto">{{ .PublishDate | time.Format "2 Jan 06"
+        }}</span>
+</a>
+{{ end }}
