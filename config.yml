@@ -2,6 +2,7 @@ baseURL: 'http://example.org/'
 languageCode: en-us
 title: Rigo Moran
 theme: tien
+enableGitInfo: true
 markup:
   highlight:
     style: onedark
@@ -19,7 +20,12 @@ menus:
   - name: Projects
     pageRef: /projects/
     weight: 30
-
+frontmatter:
+  lastmod:
+  - lastmod
+  - :git
+  - date 
+  - publishDate
 params:
   # Add svg logo to assets folder
   logo: 'logo'
