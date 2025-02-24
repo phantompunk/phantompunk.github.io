@@ -1,8 +1,10 @@
 ---
-title: "Use AWS CLI SSO Login"
+title: Use AWS CLI SSO Login
 date: 2022-09-19
 draft: false
-tags: [shell, aws, til]
+tags:
+  - shell
+  - aws
 url: login-using-aws-sso
 summary: this is a sample summary, This creates the NamedProfile if it did not already exist. An entry should be added to your
 ---

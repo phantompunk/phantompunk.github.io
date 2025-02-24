@@ -7,8 +7,6 @@ summary:
 cover: 
 tags:
   - git
-  - shell
-  - til
 url: manage-git-configs
 ---
 There's a better way to manage all your Git profiles. By adding:

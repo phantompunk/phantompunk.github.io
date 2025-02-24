@@ -4,7 +4,6 @@ subtitle: seo subtitle
 slug: debug-git-gpg
 tags:
   - git
-  - til
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1723301954681/b7f0774c-71c7-4cf6-8997-09c3b3ce1078.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp
 draft: false
 date: 2024-08-10
@@ -12,6 +11,7 @@ seoTitle: Fix Git GPG Signing Problems
 seoDescription: How to debug and fix Git GPG signing issues, including tracing and identifying problems such as expired GPG keys
 url: debug-git-gpg
 ---
+
 
 I'm relatively new to signing my commits. And I recently stumbled into a new somewhat cryptic Git error. Here's what I did to debug the problem. Hope it helps you.
 
@@ -71,3 +71,4 @@ So in my case, the problem is simple: an expired GPG Key. We just need to create
 **Bonus Tip:**
 
 - [In-depth discussion on debugging GPG issues](https://gist.github.com/paolocarrasco/18ca8fe6e63490ae1be23e84a7039374)
+

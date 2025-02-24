@@ -1,9 +1,8 @@
 ---
 title: No-Framework Approach to Building a CLI with Go
 tags:
-  - Go
-  - Golang
-  - CLI
+  - go
+  - cli
 date: 2021-12-01
 url: no-framework-go-cli
 image: https://raw.githubusercontent.com/ippontech/blog-usa/master/images/2022/03/A-No-Framework-Approach-to-Building-a-CLI-with-Go.png

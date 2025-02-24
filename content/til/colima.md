@@ -6,9 +6,7 @@ seoDescription: Minimal, fast CLI, Colima replaces Docker Desktop for macOS with
 url: colima
 slug: colima
 tags:
-  - containers
   - docker
-  - til
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1727731845567/dfb2cdb8-4c4a-4ca4-84a0-a6f30fa7fcaa.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp
 draft: false
 date: 2024-10-01

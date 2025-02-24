@@ -3,13 +3,12 @@ title: Enable dark mode for kitty, fish, Neovim
 subtitle: An example subtitle
 summary: Summary of the example
 date: 2024-01-25
-draft: true
+draft: false
 slug: theme-toggle-for-kitty-nvim
 url: theme-toggle-for-kitty-nvim
 tags:
   - vim
   - fish
-  - til
 ---
 - Occasionally I want to use a light theme during the day while working
 - Create a toggle for light and dark modes

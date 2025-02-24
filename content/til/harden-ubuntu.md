@@ -6,9 +6,7 @@ title: Harden Ubuntu security
 summary: 
 url: harden-ubuntu
 tags:
-  - til
   - linux
-  - shell
 ---
 Not as hard as I thought at least to cover the essentials. This has recently come up twice for me, first DHH talked about Linux security as [locking the front door](https://youtu.be/-cEn_83zRFw?si=iYoeUfJa09DFtO6h&t=2138) then in this guide on [setting up a production-ready VPS](https://www.youtube.com/watch?v=F-9KWQByeU0&t=1354s) (A+ guide BTW). Similar steps were mentioned in both but I’ll review the latter since it’s my current use case.
 

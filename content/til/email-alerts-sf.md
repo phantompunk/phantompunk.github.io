@@ -5,9 +5,7 @@ title: Email Alerts from Snowflake
 summary: testing snowflake alerts
 cover: 
 tags:
-  - snowflake
   - sql
-  - til
 url: email-alerts-sf
 ---
 You can send your team email alerts directly from Snowflake. This is useful when you want to monitor:

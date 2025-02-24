@@ -8,7 +8,6 @@ cover:
 tags:
   - snowflake
   - sql
-  - til
 url: auto-table-schema
 ---
 This is Snowflake specific; You can create a table definition directly from the file you want to ingest by *inferring* the file structure then building a template to create the table:

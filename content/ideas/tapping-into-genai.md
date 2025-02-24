@@ -9,7 +9,6 @@ tags:
   - llm
   - python
   - ai
-  - langchain
 url: tapping-into-genai
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1727731845567/dfb2cdb8-4c4a-4ca4-84a0-a6f30fa7fcaa.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp
 canonical: https://blog.ippon.tech/tapping-into-genai-query-your-snowflake-data-warehouse-with-langchain-aws-bedrock

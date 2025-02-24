@@ -3,11 +3,10 @@ title: Using Python Debugger PDB
 subtitle: 
 summary: Summary of the example
 date: 2024-03-21
-draft: true
+draft: false
 slug: using-python-debugger
 url: using-python-debugger
 tags:
-  - til
   - python
 ---
 This is a Today *I* Learned, meaning this is for me, written in my voice the way I want.
