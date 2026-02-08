@@ -1,5 +1,6 @@
 *.DS_Store
-#/css/*
-#/bower_components/*
-**/node_modules/*
-public/*
+node_modules/
+public/
+resources/
+assets/css/output.css
+bun.lock

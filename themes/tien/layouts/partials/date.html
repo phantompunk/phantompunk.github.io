@@ -1,5 +1,0 @@
-{{ if lt .Lastmod .PublishDate }}
-last updated: {{ .lastmod | time.format "2 jan 06" }}
-{{ else }}
-Published on: {{ .PublishDate | time.Format "2 Jan 06" }}
-{{ end }}

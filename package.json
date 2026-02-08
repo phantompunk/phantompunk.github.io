@@ -1,0 +1,21 @@
+{
+	"name": "phantompunk.github.io",
+	"module": "index.ts",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"dev": "concurrently \"bun run dev:tw\" \"bun run dev:hugo\"",
+		"dev:hugo": "hugo server -D",
+		"dev:tw": "bunx tailwindcss -i ./assets/css/main.css -o ./assets/css/output.css --watch",
+		"build": "bunx tailwindcss -i ./assets/css/main.css -o ./assets/css/output.css --minify && hugo --minify"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.3.14",
+		"@types/bun": "latest",
+		"concurrently": "^9.2.1",
+		"tailwindcss": "3"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	}
+}

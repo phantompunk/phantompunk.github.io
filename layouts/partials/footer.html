@@ -1,0 +1,10 @@
+<footer class="max-w-2xl mx-auto px-4 py-8 text-sm text-gray-500 border-t mt-12">
+  <div class="flex items-center justify-between">
+    <span>&copy; {{ now.Format "2006" }} {{ .Site.Title }}</span>
+    <ul class="flex gap-4">
+      {{ range .Site.Params.socials }}
+      <li><a href="{{ .url }}" target="_blank" rel="noopener" class="hover:underline">{{ .name }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+</footer>

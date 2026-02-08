@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="max-w-content">
+  <div class="prose prose-lg max-w-none prose-headings:text-tn-text prose-p:text-tn-text prose-a:text-tn-accent hover:prose-a:text-tn-accent-hover prose-code:text-tn-accent prose-code:bg-tn-bg-secondary">
+    <div class="text-tn-text-muted mb-6 post-content">
+      {{ .Content }}
+    </div>
+  </div>
+  <ul class="mt-8 divide-y divide-tn-border">
+    {{ range .Pages }}
+    <li class="flex items-center justify-between gap-4 py-3">
+      <div class="flex items-center gap-2 truncate">
+        <a href="{{ .RelPermalink }}" class="text-tn-text hover:text-tn-accent truncate">{{ .Title }}</a>
+        {{ with .Params.tags }}
+          {{ range . }}
+          <span class="tag tag-{{ . }}">{{ . }}</span>
+          {{ end }}
+        {{ end }}
+      </div>
+      <time class="text-sm text-tn-text-muted tabular-nums shrink-0" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan 06" }}</time>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

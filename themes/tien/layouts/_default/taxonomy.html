@@ -1,7 +1,0 @@
-<h1>Term HTML</h1>
-<h1>{{.Site.MainSections}}</h1>
-<ul>
-    {{ range .Data.Terms.Alphabetical }}
-    <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
-    {{ end }}
-</ul>

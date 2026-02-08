@@ -1,0 +1,22 @@
+{{ define "main" }}
+<article class="
+  prose prose-slate 
+  dark:prose-invert 
+  /* Responsive sizing: small on mobile, base on desktop */
+  prose-sm md:prose-base lg:prose-lg 
+  /* Layout constraints */
+  max-w-none 
+  mx-auto
+">
+
+  <article>
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold mb-4 leading-tight">{{ .Title }}</h1>
+      <p class="text-tn-text-muted text-sm">{{ .Date.Format "January 2, 2006" }}</p>
+    </div>
+    <div class="post-content">
+      {{ .Content }}
+    </div>
+  </article>
+{{ end }}
+

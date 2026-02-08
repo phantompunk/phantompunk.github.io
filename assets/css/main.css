@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		/* Define your brand colors as CSS variables if you want to swap them easily */
+		--brand-primary: theme("colors.indigo.600");
+	}
+
+	html {
+		/* Prevents layout shift when scrollbars appear */
+		margin-right: calc(100vw - 100%);
+		overflow-x: hidden;
+	}
+
+	body {
+		/* Typography plugin inherits font-family and text color from body */
+		@apply antialiased bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100;
+		font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+	}
+
+	/* Improve the "Click Area" for mobile users */
+	button,
+	a {
+		@apply touch-manipulation;
+	}
+
+	html {
+		-webkit-tap-highlight-color: transparent;
+		scroll-behavior: smooth;
+	}
+}
+
+@layer components {
+	.tag {
+		@apply px-2 py-0.5 text-xs rounded-full;
+	}
+}
+
+/* Tag colors — outside @layer to avoid Tailwind purging */
+.tag-linux     { background-color: #451a03; color: #fbbf24; }
+.tag-vim       { background-color: #022c22; color: #34d399; }
+.tag-git       { background-color: #431407; color: #fb923c; }
+.tag-docker    { background-color: #082f49; color: #38bdf8; }
+.tag-python    { background-color: #422006; color: #facc15; }
+.tag-sql       { background-color: #2e1065; color: #a78bfa; }
+.tag-shell     { background-color: #1a2e05; color: #a3e635; }
+.tag-aws       { background-color: #431407; color: #fdba74; }
+.tag-snowflake { background-color: #083344; color: #22d3ee; }
+.tag-api       { background-color: #4c0519; color: #fb7185; }
+.tag-fish      { background-color: #042f2e; color: #2dd4bf; }
+.tag-go        { background-color: #082f49; color: #38bdf8; }
+.tag-cli       { background-color: #1a2e05; color: #a3e635; }
+.tag-llm       { background-color: #2e1065; color: #a78bfa; }
+.tag-ai        { background-color: #4c0519; color: #fb7185; }
