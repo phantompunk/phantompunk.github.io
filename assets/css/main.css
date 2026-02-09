@@ -1,3 +1,5 @@
+@import "syntax.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,8 +8,8 @@
 	:root {
 		--tn-bg: #eff1f5;
 		--tn-bg-secondary: #e6e9ef;
-		--tn-text: #4c4f69;
-		--tn-text-muted: #8c8fa1;
+		--tn-text: #2c2e3e;
+		--tn-text-muted: #6c6f85;
 		--tn-accent: #179299;
 		--tn-accent-hover: #04a5e5;
 		--tn-border: #ccd0da;
@@ -16,8 +18,8 @@
 	.dark {
 		--tn-bg: #1a1b26;
 		--tn-bg-secondary: #283457;
-		--tn-text: #c0caf5;
-		--tn-text-muted: #7982a9;
+		--tn-text: #d5daf0;
+		--tn-text-muted: #9aa5ce;
 		--tn-accent: #73daca;
 		--tn-accent-hover: #9eecd8;
 		--tn-border: #283457;

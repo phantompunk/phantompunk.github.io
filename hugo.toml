@@ -3,8 +3,12 @@ languageCode = 'en-us'
 title = 'Rigo Moran'
 enableGitInfo = true
 
-[markup.highlight]
-style = 'onedark'
+[markup]
+  [markup.highlight]
+    noClasses = false
+    lineNos = false
+    guessSyntax = true
+    tabWidth = 4
 
 [[menus.main]]
 name = 'About'
