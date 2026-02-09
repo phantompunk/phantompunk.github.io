@@ -23,7 +23,7 @@
     {{ block "main" . }}{{ end }}
   </main>
   <!-- Mobile top nav -->
-  <nav class="fixed top-0 inset-x-0 z-50 md:hidden flex items-center justify-center gap-4 px-4 py-3 bg-slate-50 dark:bg-slate-950 text-sm text-tn-text-muted">
+  <nav class="fixed top-0 inset-x-0 z-50 md:hidden flex items-center justify-center gap-4 px-4 py-3 bg-tn-bg text-sm text-tn-text-muted">
     {{ range .Site.Menus.main }}
     <a href="{{ .URL }}" class="hover:text-tn-accent">{{ .Name }}</a>
     {{ end }}

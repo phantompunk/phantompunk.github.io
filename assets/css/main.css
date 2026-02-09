@@ -4,8 +4,23 @@
 
 @layer base {
 	:root {
-		/* Define your brand colors as CSS variables if you want to swap them easily */
-		--brand-primary: theme("colors.indigo.600");
+		--tn-bg: #eff1f5;
+		--tn-bg-secondary: #e6e9ef;
+		--tn-text: #4c4f69;
+		--tn-text-muted: #8c8fa1;
+		--tn-accent: #179299;
+		--tn-accent-hover: #04a5e5;
+		--tn-border: #ccd0da;
+	}
+
+	.dark {
+		--tn-bg: #1a1b26;
+		--tn-bg-secondary: #283457;
+		--tn-text: #c0caf5;
+		--tn-text-muted: #7982a9;
+		--tn-accent: #73daca;
+		--tn-accent-hover: #9eecd8;
+		--tn-border: #283457;
 	}
 
 	html {
@@ -16,7 +31,9 @@
 
 	body {
 		/* Typography plugin inherits font-family and text color from body */
-		@apply antialiased bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100;
+		@apply antialiased;
+		background-color: var(--tn-bg);
+		color: var(--tn-text);
 		font-feature-settings: "cv02", "cv03", "cv04", "cv11";
 	}
 
@@ -38,19 +55,45 @@
 	}
 }
 
-/* Tag colors — outside @layer to avoid Tailwind purging */
-.tag-linux     { background-color: #451a03; color: #fbbf24; }
-.tag-vim       { background-color: #022c22; color: #34d399; }
-.tag-git       { background-color: #431407; color: #fb923c; }
-.tag-docker    { background-color: #082f49; color: #38bdf8; }
-.tag-python    { background-color: #422006; color: #facc15; }
-.tag-sql       { background-color: #2e1065; color: #a78bfa; }
-.tag-shell     { background-color: #1a2e05; color: #a3e635; }
-.tag-aws       { background-color: #431407; color: #fdba74; }
-.tag-snowflake { background-color: #083344; color: #22d3ee; }
-.tag-api       { background-color: #4c0519; color: #fb7185; }
-.tag-fish      { background-color: #042f2e; color: #2dd4bf; }
-.tag-go        { background-color: #082f49; color: #38bdf8; }
-.tag-cli       { background-color: #1a2e05; color: #a3e635; }
-.tag-llm       { background-color: #2e1065; color: #a78bfa; }
-.tag-ai        { background-color: #4c0519; color: #fb7185; }
+.post-content a {
+	text-decoration: none;
+}
+
+.post-content a:hover {
+	text-decoration: underline;
+	text-decoration-style: wavy;
+}
+
+/* Tag colors — light mode (Catppuccin Latte) */
+.tag-linux     { background-color: #e6dfc5; color: #df8e1d; }
+.tag-vim       { background-color: #d5e5d0; color: #40a02b; }
+.tag-git       { background-color: #ebced1; color: #d20f39; }
+.tag-docker    { background-color: #cddeed; color: #209fb5; }
+.tag-python    { background-color: #ddd5ed; color: #8839ef; }
+.tag-sql       { background-color: #ced6ed; color: #1e66f5; }
+.tag-shell     { background-color: #c9e5e0; color: #179299; }
+.tag-aws       { background-color: #eddcd0; color: #fe640b; }
+.tag-snowflake { background-color: #c9e3ea; color: #04a5e5; }
+.tag-api       { background-color: #edceda; color: #ea76cb; }
+.tag-fish      { background-color: #c9e5e0; color: #179299; }
+.tag-go        { background-color: #cddeed; color: #209fb5; }
+.tag-cli       { background-color: #dce0e8; color: #6c6f85; }
+.tag-llm       { background-color: #ddd5ed; color: #7287fd; }
+.tag-ai        { background-color: #ebced1; color: #e64553; }
+
+/* Tag colors — dark mode */
+.dark .tag-linux     { background-color: #2a261b; color: #e0af68; }
+.dark .tag-vim       { background-color: #1e2a1e; color: #9ece6a; }
+.dark .tag-git       { background-color: #2d1b22; color: #f7768e; }
+.dark .tag-docker    { background-color: #1a2832; color: #7dcfff; }
+.dark .tag-python    { background-color: #24203a; color: #bb9af7; }
+.dark .tag-sql       { background-color: #1b2338; color: #7aa2f7; }
+.dark .tag-shell     { background-color: #1a2b2b; color: #73daca; }
+.dark .tag-aws       { background-color: #2b211a; color: #ff9e64; }
+.dark .tag-snowflake { background-color: #1a2630; color: #2ac3de; }
+.dark .tag-api       { background-color: #2d1b2e; color: #f7768e; }
+.dark .tag-fish      { background-color: #182a2a; color: #b4f9f8; }
+.dark .tag-go        { background-color: #1b2535; color: #89ddff; }
+.dark .tag-cli       { background-color: #1e2030; color: #a9b1d6; }
+.dark .tag-llm       { background-color: #261e35; color: #bb9af7; }
+.dark .tag-ai        { background-color: #2a1e24; color: #ff7a93; }

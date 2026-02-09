@@ -27,13 +27,13 @@ export default {
 			}),
 			colors: {
 				tn: {
-					bg: "#1a1b26",
-					"bg-secondary": "#283457",
-					text: "#c0caf5",
-					"text-muted": "#7982a9",
-					accent: "#73daca",
-					"accent-hover": "#9eecd8",
-					border: "#283457",
+					bg: "var(--tn-bg)",
+					"bg-secondary": "var(--tn-bg-secondary)",
+					text: "var(--tn-text)",
+					"text-muted": "var(--tn-text-muted)",
+					accent: "var(--tn-accent)",
+					"accent-hover": "var(--tn-accent-hover)",
+					border: "var(--tn-border)",
 				},
 			},
 			maxWidth: {
