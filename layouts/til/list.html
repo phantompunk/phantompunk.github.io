@@ -11,8 +11,15 @@
       <div class="flex items-center gap-2 truncate">
         <a href="{{ .RelPermalink }}" class="text-tn-text hover:text-tn-accent truncate">{{ .Title }}</a>
         {{ with .Params.tags }}
-          {{ range . }}
+          {{ range first 1 . }}
           <span class="tag tag-{{ . }}">{{ . }}</span>
+          {{ end }}
+          {{ if gt (len .) 1 }}
+          <span class="hidden md:inline">
+            {{ range after 1 . }}
+            <span class="tag tag-{{ . }}">{{ . }}</span>
+            {{ end }}
+          </span>
           {{ end }}
         {{ end }}
       </div>
