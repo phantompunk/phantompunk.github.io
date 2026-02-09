@@ -57,6 +57,114 @@
 	}
 }
 
+/* Search modal */
+.search-modal {
+	position: fixed;
+	inset: 0;
+	z-index: 100;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	padding-top: 15vh;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.15s ease;
+}
+
+.search-modal.active {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.search-backdrop {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.4);
+}
+
+.search-container {
+	position: relative;
+	width: 100%;
+	max-width: 32rem;
+	margin: 0 1rem;
+	background-color: var(--tn-bg);
+	border: 1px solid var(--tn-border);
+	border-radius: 0.75rem;
+	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+	transform: scale(0.95);
+	transition: transform 0.15s ease;
+}
+
+.search-modal.active .search-container {
+	transform: scale(1);
+}
+
+.search-input {
+	width: 100%;
+	padding: 0.875rem 1rem;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid var(--tn-border);
+	border-radius: 0.75rem 0.75rem 0 0;
+	color: var(--tn-text);
+	font-size: 1rem;
+	outline: none;
+}
+
+.search-input::placeholder {
+	color: var(--tn-text-muted);
+}
+
+.search-results {
+	max-height: 50vh;
+	overflow-y: auto;
+}
+
+.search-result {
+	display: block;
+	padding: 0.75rem 1rem;
+	text-decoration: none;
+	color: var(--tn-text);
+	border-bottom: 1px solid var(--tn-border);
+	transition: background-color 0.1s ease;
+}
+
+.search-result:last-child {
+	border-bottom: none;
+}
+
+.search-result:hover {
+	background-color: var(--tn-bg-secondary);
+}
+
+.search-result-title {
+	display: block;
+	font-size: 0.875rem;
+	font-weight: 500;
+	color: var(--tn-text-muted);
+	margin-bottom: 0.25rem;
+}
+
+.search-result-excerpt {
+	display: block;
+	font-size: 0.8125rem;
+	line-height: 1.5;
+	color: var(--tn-text);
+}
+
+.search-result-excerpt mark {
+	background-color: transparent;
+	color: var(--tn-accent);
+	font-weight: 600;
+}
+
+.search-empty {
+	padding: 1.5rem 1rem;
+	text-align: center;
+	color: var(--tn-text-muted);
+	font-size: 0.875rem;
+}
+
 .post-content a {
 	text-decoration: none;
 }
