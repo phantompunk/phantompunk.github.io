@@ -1,7 +1,12 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://rigomoran.com/'
 languageCode = 'en-us'
 title = 'Rigo Moran'
 enableGitInfo = true
+enableRobotsTXT = true
+
+[sitemap]
+  changeFreq = 'weekly'
+  priority = 0.5
 
 [taxonomies]
 
@@ -37,6 +42,8 @@ lastmod = ['lastmod', ':git', 'date', 'publishDate']
 
 [params]
 logo = 'logo'
+description = "Rigo Moran's blog on software engineering, tools, and ideas"
+author = "Rigo Moran"
 
 [[params.socials]]
 name = 'twitter'

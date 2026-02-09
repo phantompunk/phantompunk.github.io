@@ -1,0 +1,111 @@
+{{- /* Description fallback chain: seoDescription > summary > subtitle > .Summary */ -}}
+{{- $description := .Summary | plainify | htmlUnescape | truncate 200 -}}
+{{- with .Params.subtitle }}{{ $description = . }}{{ end -}}
+{{- with .Params.summary }}{{ $description = . }}{{ end -}}
+{{- with .Params.seoDescription }}{{ $description = . }}{{ end -}}
+{{- if .IsHome }}{{ with .Site.Params.description }}{{ $description = . }}{{ end }}{{ end -}}
+
+{{- /* Title: seoTitle or .Title, fallback to site title */ -}}
+{{- $title := .Title | default .Site.Title -}}
+{{- with .Params.seoTitle }}{{ $title = . }}{{ end -}}
+
+{{- /* Image from cover or image frontmatter */ -}}
+{{- $image := "" -}}
+{{- with .Params.cover }}{{ $image = . }}{{ end -}}
+{{- with .Params.image }}{{ $image = . }}{{ end -}}
+
+{{- /* Canonical URL */ -}}
+{{- $canonical := .Permalink -}}
+{{- with .Params.canonical }}{{ $canonical = . }}{{ end -}}
+
+{{- /* Twitter handle from socials config */ -}}
+{{- $twitterHandle := "" -}}
+{{- range .Site.Params.socials -}}
+  {{- if eq .name "twitter" -}}
+    {{- $twitterHandle = replaceRE `^https?://(www\.)?twitter\.com/` "@" .url -}}
+    {{- $twitterHandle = replaceRE `^https?://(www\.)?x\.com/` "@" $twitterHandle -}}
+  {{- end -}}
+{{- end -}}
+
+<meta name="description" content="{{ $description }}">
+<link rel="canonical" href="{{ $canonical }}">
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+{{- with .Site.LanguageCode }}
+<meta property="og:locale" content="{{ replace . "-" "_" }}">
+{{- end }}
+{{- if $image }}
+<meta property="og:image" content="{{ $image }}">
+{{- end }}
+
+{{- if .IsPage }}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+{{- with .Site.Params.author }}
+<meta property="article:author" content="{{ . }}">
+{{- end }}
+{{- range .Params.tags }}
+<meta property="article:tag" content="{{ . }}">
+{{- end }}
+{{- end }}
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="{{ if $image }}summary_large_image{{ else }}summary{{ end }}">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $description }}">
+{{- if $image }}
+<meta name="twitter:image" content="{{ $image }}">
+{{- end }}
+{{- if $twitterHandle }}
+<meta name="twitter:creator" content="{{ $twitterHandle }}">
+{{- end }}
+
+<!-- JSON-LD Structured Data -->
+{{- if .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ $title | jsonify }},
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "description": {{ $description | jsonify }},
+  {{- with .Site.Params.author }}
+  "author": {
+    "@type": "Person",
+    "name": {{ . | jsonify }}
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": {{ . | jsonify }}
+  },
+  {{- end }}
+  {{- if $image }}
+  "image": {{ $image | jsonify }},
+  {{- end }}
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  }
+}
+</script>
+{{- else }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ .Site.Title | jsonify }},
+  "url": "{{ .Site.BaseURL }}",
+  "description": {{ $description | jsonify }}{{ with .Site.Params.author }},
+  "author": {
+    "@type": "Person",
+    "name": {{ . | jsonify }}
+  }{{ end }}
+}
+</script>
+{{- end }}
