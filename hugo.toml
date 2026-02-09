@@ -3,6 +3,8 @@ languageCode = 'en-us'
 title = 'Rigo Moran'
 enableGitInfo = true
 
+[taxonomies]
+
 [markup]
   [markup.highlight]
     noClasses = false
