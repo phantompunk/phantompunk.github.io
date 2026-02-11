@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="max-w-content">
-  <div class="prose prose-lg max-w-none prose-headings:text-tn-text prose-p:text-tn-text prose-a:text-tn-accent hover:prose-a:text-tn-accent-hover prose-code:text-tn-accent prose-code:bg-tn-bg-secondary">
+  <div class="prose prose-lg max-w-none prose-headings:text-tn-text prose-p:text-tn-text prose-strong:text-tn-text prose-a:text-tn-accent hover:prose-a:text-tn-accent-hover prose-code:text-tn-accent prose-code:bg-tn-bg-secondary">
     <div class="text-tn-text-muted mb-6 post-content">
       {{ .Content }}
     </div>
@@ -9,7 +9,7 @@
     {{ range .Pages }}
     <li class="flex items-center justify-between gap-4 py-3">
       <div class="flex items-center gap-2 truncate">
-        <a href="{{ .RelPermalink }}" class="text-tn-text hover:text-tn-accent truncate">{{ .Title }}</a>
+        <a href="{{ .RelPermalink }}" class="text-base md:text-lg text-tn-text hover:text-tn-accent truncate">{{ .Title }}</a>
         {{ with .Params.tags }}
           {{ range first 1 . }}
           <span class="tag tag-{{ . }}">{{ . }}</span>

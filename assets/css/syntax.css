@@ -7,7 +7,7 @@
 	padding: 1rem 1.25rem;
 	border-radius: 0.5rem;
 	overflow-x: auto;
-	font-size: 0.875rem;
+	font-size: 0.9375rem;
 	line-height: 1.7;
 	border: 1px solid var(--tn-border);
 }
@@ -16,7 +16,7 @@
 :not(pre) > code {
 	padding: 0.15em 0.4em;
 	border-radius: 0.25rem;
-	font-size: 0.875em;
+	font-size: 0.9375em;
 	font-weight: 600;
 	background-color: var(--tn-bg-secondary);
 	color: var(--tn-accent);
