@@ -1,9 +1,11 @@
+# Hey! I'm ***Rigo***
 
-Hey, my name is Rodrigo Moran, you can call me rigo, I'm a software engineer working mostly on the plumbing. I like to build CLIs in my free time. I like taking notes what things I learned.
+I'm a *software* engineer who builds products, mostly focused on backend and lots of CLIs. Previously I worked at ***Ippon*** as a generalist working across the stack from microservices and data pipelines, to infrastructure.
 
-I'm open to work. Previously at IPPON.
+I'm always learning something new and trying to share what I've picked up (mostly for my future self).
 
-- find me on [bluesky](https://bsky.app/profile/rigomoran.com) and [linkedin](https://www.linkedin.com/in/rodrigomoran/)
-- most of my code lives on [github](https://github.com/phantompunk)
-- read about all the cli magic, tricks, and tips at [til/](/til/)
-- reach me at [hi@rigomoran.com](hi@rigomoran.com)
+I'm currently **looking for my next challenge**. If you want to talk shop or collaborate you can:
+- find me on [bluesky](https://bsky.app/profile/rigomoran.com) or [linkedin](https://www.linkedin.com/in/rodrigomoran/)
+- read my code on [github](https://github.com/phantompunk)
+- read about what I just learned at [til](/til/)
+- or reach me directly via [email](mailto:hi@rigo.cc)
